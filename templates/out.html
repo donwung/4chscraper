@@ -19,14 +19,14 @@
             </div>
         </div>
         {% for oneImg in allImgs %}
-        <input type="checkbox" name="{{oneImg[0]}}{{oneImg[1]}}" value="True">
+        <input type="checkbox" name="{{oneImg[0]}}{{oneImg[1]}}" value="True" checked >
         <label>{{oneImg[0]}}{{oneImg[1]}}</label>
         {% if oneImg[1] != ".webm" %}
-        <div>
+        <div style="width:100vw">
             <img src="/static/{{oneImg[0]}}{{oneImg[1]}}" alt="{{oneImg}}">
         </div>
         {% else %}
-        <div>
+        <div style="width:100vw">
             <video height="40%" controls>
                 <source src="/static/{{oneImg[0]}}{{oneImg[1]}}" type="video/webm">
             </video>
